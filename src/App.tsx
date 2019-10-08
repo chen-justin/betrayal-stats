@@ -1,26 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./styles/App.scss";
+import * as betrayalData from "./betrayal.json";
+import CharacterCard from "./components/CharacterCard";
 
 const App: React.FC = () => {
+  const characters = betrayalData["characters"];
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <img src={require("./assets/crow.svg")} />
+      {Object.entries(characters).map(([key, value]) => {
+        return <CharacterCard key={key} char={value[0]} charAlt={value[1]} />;
+      })}
     </div>
   );
-}
+};
 
 export default App;

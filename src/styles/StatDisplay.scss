@@ -1,0 +1,52 @@
+.CharacterStat {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.CharacterStatTitle {
+  margin-bottom: 1rem;
+}
+
+.Character-StatValues-Container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.CharacterStatValues {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  flex-shrink: 1;
+}
+
+.CharacterStatValue {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.CharacterStatStart {
+  color: green;
+}
+
+.CharacterStatButton {
+  width: 50px;
+  height: 50px;
+  flex: 0 0 auto;
+  font-family: inherit;
+  border: 0;
+  background: none;
+}
+
+.CharacterCurrStat {
+  border: 1px solid gray;
+  box-sizing: border-box;
+}
